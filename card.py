@@ -4,4 +4,7 @@ class Card:
         self.value = value
 
     def print_status(self):
-        print(self.value + ' of ' + self.suit)
+        print(f"""_______
+|{self.value}{" "if self.value == 10 else "  "}  |
+|  {self.suit}  |
+|__{"_"if self.value == 10 else "__"}{self.value}|""")
